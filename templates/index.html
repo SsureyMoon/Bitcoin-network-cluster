@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+    <form id="get-btn">
+        <div class="form-group">
+            <label for="input-btn">Enter a bitcoin address:</label>
+            <input type="text" class="form-control" id="input-btn" name="btn_address" placeholder="Enter btn address">
+        </div>
+        <button type="submit" class="btn btn-primary">Generate it!</button> <button id="cluster-btn" class="btn btn-success">Cluster it!</button>
+    </form>
+    <div id="mySpinner"></div>
+    <div align='center' id="d3_selectable_force_directed_graph"></div>
+{% endblock %}
+
+{% block javascript %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='d3.v3.min.js') }}"></script>
+    <!--<script src="{{ url_for('static', filename='plot.js') }}"></script>-->
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <!--<script>selectableForceDirectedGraph();</script>-->
+    <!--<script>selectableForceDirectedGraph();</script>-->
+{% endblock %}

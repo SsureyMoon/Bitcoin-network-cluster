@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+backups
+static/bootstrap/*
+data/*
+*.pyc

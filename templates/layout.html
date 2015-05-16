@@ -1,0 +1,36 @@
+<!doctype html>
+<title>Bitcoin network canvas</title>
+<meta charset="utf-8">
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<div class=container>
+  <h1>Bitcoin network</h1>
+  <div class=metanav>
+  </div>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+
+  {% block body %}{% endblock %}
+    <div>
+        <blockquote>
+            <h3>Source code:</h3>
+            <p><img src="{{ url_for('static', filename='github-icon-black.png') }}" height="40" width="40"/>  <a href="https://github.com/SsureyMoon/Bitcoin-network-cluster">Github</a></p>
+
+            <h3>Reference:</h3>
+            <p><strong>Web framework: </strong> <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://gunicorn.org/">Gunicorn</a></p>
+            <p><strong>Data source: </strong> <a href="https://blockchain.info/">Blockchain.info</a></p>
+            <p><strong>Clustering libraries: </strong> <a href="https://networkx.github.io/">NetworkX</a>, <a href="http://perso.crans.org/aynaud/communities/">Community Detection</a></p>
+            <p><strong>Visualization libraries: </strong> <a href="http://d3js.org/">D3.js</a>, <a href="https://gist.github.com/pkerpedjiev/0389e39fad95e1cf29ce">Interactive Force Directed Graph</a>, <a href="http://getbootstrap.com/">Bootstrap3</a></p>
+        </blockquote>
+
+
+    </div>
+
+    {% block javascript %}
+        <script src="{{ url_for('static', filename='jquery-2.1.3.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    {% endblock %}
+</div>
