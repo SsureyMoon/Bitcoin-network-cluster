@@ -1,5 +1,6 @@
 # Bitcoin network drawer
 This wep application has two functions.
+
 1. Aggregating history of bitcoin addresses of a given bitcoin address and drawing of the bitcoin network.
 2. Finding clusters of the bitcoin network from 1 and showing them in different colors.
 
